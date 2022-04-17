@@ -46,6 +46,14 @@ a {
     padding: 8px 12px;
 }
 
+.toogleBtn {
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: orange;
+}
+
 @media screen and (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -53,6 +61,7 @@ a {
         padding: 8px 12px;
     }
     .menu {
+        display: none;
         flex-direction: column;
         align-items: center;
         width: 100%;
@@ -62,8 +71,12 @@ a {
         text-align: center;
     }
     .icon {
+        display: none;
         justify-content: center;
         width: 100%;
+    }
+    .toogleBtn {
+        display: block;
     }
 }
 

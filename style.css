@@ -1,3 +1,9 @@
+:root {
+    --text: snow;
+    --background: mediumpurple;
+    --accent: orange;
+}
+
 body {
     margin: 0;
     font-family: 'Source Sans Pro';
@@ -5,19 +11,19 @@ body {
 
 a {
     text-decoration: none;
-    color: white;
+    color: var(--text);
 }
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: mediumpurple;
+    background-color: var(--background);
     padding: 8px 12px;
 }
 
 .logo {
     font-size: 24px;
-    color: orange;
+    color: var(--accent);
 }
 
 .menu {
@@ -31,13 +37,13 @@ a {
 }
 
 .menu li:hover {
-    background-color: orange;
+    background-color: var(--accent);
     border-radius: 4px;
 }
 
 .icon {
     list-style: none;
-    color: white;
+    color: var(--accent);
     display: flex;
     padding-left: 0;
 }
@@ -46,12 +52,12 @@ a {
     padding: 8px 12px;
 }
 
-.toogleBtn {
+.hamBtn {
     display: none;
     position: absolute;
     right: 32px;
     font-size: 24px;
-    color: orange;
+    color: var(--accent);
 }
 
 @media screen and (max-width: 768px) {
@@ -75,8 +81,12 @@ a {
         justify-content: center;
         width: 100%;
     }
-    .toogleBtn {
+    .hamBtn {
         display: block;
+    }
+    .menu.active,
+    .icon.active {
+        display: flex;
     }
 }
 
